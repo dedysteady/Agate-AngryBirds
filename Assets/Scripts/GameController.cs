@@ -28,6 +28,8 @@ public class GameController : MonoBehaviour
 
         TapCollider.enabled = false;
         SlingShooter.InitiateBird(Birds[0]);
+        _shotBird = Birds[0];
+
     }
 
     public void AssignTrail(Bird bird)
@@ -58,6 +60,7 @@ public class GameController : MonoBehaviour
 
         if(Birds.Count > 0)
             SlingShooter.InitiateBird(Birds[0]);
+            _shotBird = Birds[0];
     }
 
     public void CheckGameEnd(GameObject destroyedEnemy)
